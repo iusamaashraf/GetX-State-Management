@@ -5,6 +5,24 @@ class ShoppingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: 5,
+                itemBuilder: (BuildContext context, int index) {
+                  return Card();
+                },
+              ),
+            ),
+            const Text('Total Amount:'),
+            const SizedBox(height: 100),
+          ],
+        ),
+      ),
+    );
   }
 }
